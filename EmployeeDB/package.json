@@ -3,12 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "express": "4.17.1",
     "jade": "*",
     "stylus": "*",
-    "mongodb": ">= 0.9.6-7"
-  }
+    "mongodb": ">= 0.9.6-7",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
